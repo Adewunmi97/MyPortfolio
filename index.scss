@@ -1,0 +1,110 @@
+@import './partials/root';
+@import './partials/hamburger';
+@import './partials/sidebar';
+@import './partials/skills';
+@import './partials/mywork';
+@import './partials/contact';
+
+.container {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    @media screen and (min-width: 850px) {
+        height: 100vh;
+        overflow-y: auto;
+        padding-inline: 5rem;
+    }
+    #about {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .ab {
+            .about-head {
+                padding: 6rem 0 1rem 0;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 4rem;
+                    height: .3rem;
+                    background-color: $primary;
+                }
+            }
+            .about-me {
+                width: 70%;
+                margin: auto;
+                height: fit-content;
+                background: $white;
+                margin-top: 2rem;
+                border-radius: 3px;
+                color: $black;
+                padding: 1rem;
+                line-height: 1.8rem;
+                .resume {
+                    text-decoration: none;
+                    color: $fill;
+                    cursor: pointer;
+                    font-weight: 600;
+                }
+    
+            }
+        }
+        .percent {
+            width: 100%;
+            @media screen and (min-width: 850px) {
+            }
+            li {
+                list-style: none;
+                padding-block: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                .progress-bar {
+                    border: .1rem solid $border;
+                    text-align: end;
+                    padding-inline: .2rem;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: .2rem;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        height: 100%;
+                        position: absolute;
+                        background: $fill;
+                        left: 0;
+                        z-index: -1;
+                    }
+                    &.html{
+                        &::before{
+                            width: 95%;
+                        }
+                    }
+                    &.css{
+                        &::before{
+                            width: 80%;
+                        }
+                    }
+                    &.js{
+                        &::before{
+                            width: 70%;
+                        }
+                    }
+                    &.jq{
+                        &::before{
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

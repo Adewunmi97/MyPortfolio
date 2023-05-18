@@ -1,0 +1,93 @@
+#contact {
+    border-top: 3px solid $border;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    .contact-head {
+        padding: 3rem 0 1rem 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 5rem;
+            height: 0.3rem;
+            background-color: $primary;
+        }
+    }
+    .my-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        input {
+            width: 100%;
+            padding: 10px;
+            background: $opaque-wt;
+            outline: none;
+            border: 1px solid $border;
+            color: $white;
+            font-family: $poppin;
+            &::placeholder {
+                color: $white;
+                font-weight: 500;
+            }
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background: $opaque-wt;
+            outline: none;
+            border: 1px solid $border;
+            color: $white;
+            font-size: 0.8rem;
+            font-family: $poppin;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            width: fit-content;
+            display: grid;
+            place-content: center;
+            background: $fill;
+            color: $white;
+            font-weight: 600;
+            font-family: $poppin;
+            cursor: pointer;
+            &:hover {
+                color: $black;
+                background: $primary;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+.resume-btn {
+    position: fixed;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    padding: 0.4rem 1.2rem;
+    background: $fill;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 0.2rem;
+    &:hover {
+        background: $primary;
+        transition: 0.5s;
+    }
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+#mywork {
+    border-top: 3px solid $border;
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-block: 4rem;
+    .work-head {
+        padding: 0 0 1rem 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 4.5rem;
+            height: 0.3rem;
+            background-color: $primary;
+        }
+    }
+    .work-text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .project-about {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .work {
+            width: 100%;
+            height: 25rem;
+            border: 1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.work1 {
+                background-image: url(../assets/images/todolist.png);
+            }
+            &.work2 {
+                background-image: url(../assets/images/scorelist.png);
+            }
+            &.work3 {
+                background-image: url(../assets/images/movielist.png);
+            }
+            &.work4 {
+                background-image: url(../assets/images/Screenshot\ \(7\).png);
+            }
+            .work-link {
+                text-decoration: none;
+                padding: .6rem;
+                color: $white;
+                background-color: $fill;
+                font-weight: 500;
+                border-radius: .2rem;
+                &:hover {
+                    background-color: $primary;
+                    color: $black;
+                    transition: 0.5s;
+                }
+            }
+        }
+        .info {
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            h4 {
+                .title {
+                    font-style: italic;
+                    color: $primary;
+                }
+            }
+            p {
+                width: 100%;
+                word-break: break-all;
+            }
+        }
+    }
+}
