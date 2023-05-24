@@ -35,31 +35,26 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        .work {
+        .work-img {
             width: 100%;
-            height: 25rem;
-            border: 1px solid grey;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            &.work1 {
-                background-image: url(../assets/images/todolist.png);
+            img {
+                width: 100%;
+                height: auto;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
-            &.work2 {
-                background-image: url(../assets/images/scorelist.png);
-            }
-            &.work3 {
-                background-image: url(../assets/images/movielist.png);
-            }
-            &.work4 {
-                background-image: url(../assets/images/Screenshot\ \(7\).png);
-            }
+        }
+        .work {
+            display: flex;
+            justify-content: start;
+            width: 100%;
             .work-link {
                 text-decoration: none;
-                padding: .6rem;
+                padding: .5rem;
                 color: $white;
                 background-color: $fill;
                 font-weight: 500;
